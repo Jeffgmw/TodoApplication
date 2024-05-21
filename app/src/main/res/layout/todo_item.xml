@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/todoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/todoDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Todo Description"
+        android:textSize="24sp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/deleteIcon"/>
+
+    <LinearLayout
+        android:id="@+id/deadlineContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/todoDesc"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/deleteIcon"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/todoDeadlineLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deadline:"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/todoDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deleteIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"/>
+
+</RelativeLayout>
